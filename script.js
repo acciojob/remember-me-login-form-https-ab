@@ -1,5 +1,5 @@
 //your JS code here. If required.
-let form = document.getElementById("form");
+let form = document.getElementById("loginForm");
 let username = document.getElementById("username");
 let password = document.getElementById("password");
 let checkbox = document.getElementById("checkbox");
@@ -24,21 +24,21 @@ form.addEventListener("submit", function(e) {
 
 	alert(`Logged in as ${name}`);
 
-	if(checkbox.checked) {
-		localStorage.setItem("name", name);
-		localStorage.setItem("password", pass);
-		existing.style.display = "block";
-	} else {
-		localStorage.removeItem("name");
-		localStorage.removeItem("password");
-		existing.style.display = "none";
-	}
+	if (checkbox.checked) {
+  localStorage.setItem("username", name);
+  localStorage.setItem("password", pass);
+  existing.style.display = "block";
+} else {
+  localStorage.removeItem("username");
+  localStorage.removeItem("password");
+  existing.style.display = "none";
+}
 	form.reset();
 })
 
 existing.addEventListener("click", function() {
-	let storedName = localStorage.getItem("name");
-	if (storedName) {
-		alert(`Logged in as ${storedName}`);
-	}
-})
+  let storedName = localStorage.getItem("username");
+  if (storedName) {
+    alert(`Logged in as ${storedName}`);
+  }
+});

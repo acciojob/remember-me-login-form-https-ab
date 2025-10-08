@@ -9,13 +9,20 @@
 <body>
 	<!-- the entire body must be written by student -->
 	<h1>Login Form</h1>
-	<form id="form">
-		<label for="username">Username - </label>
-		<input type="text" placeholder="Username" id="username"> <br>
-		<label for="password">Password - </label>
-		<input type="password" placeholder="Password" id="password"> <br>
-		<input type="checkbox" id="checkbox"> <label>Remember me.</label> <br>
-		<button type="submit" id="submit" value="submit">Submit</button>
+	<form id="loginForm">
+		<label for="username">Username:</label>
+		<input type="text" id="username" placeholder="Username" />
+
+		<label for="password">Password:</label>
+		<input type="password" id="password" placeholder="Password" />
+
+		<label for="checkbox">
+		<input type="checkbox" id="checkbox" /> Remember me:
+		</label>
+
+		<!-- ✅ Important: Cypress expects exactly this -->
+		<input type="submit" id="submit" value="Submit" />
+
 	</form>
 	<button id="existing" style="display: none;">Login as existing user</button>
     <script type="text/javascript" src="./script.js">
